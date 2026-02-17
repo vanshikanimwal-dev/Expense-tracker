@@ -1,229 +1,46 @@
-Smart Expense Tracker
-
-A modern, production-ready Flutter expense tracking application built with Clean Architecture, Firebase, and Riverpod.
-Track income, expenses, analytics, and financial summaries with a beautiful UI and real-time cloud sync.
-
-Features
-
-Firebase Authentication (Email/Password)
-
-Cloud Firestore expense storage
-
-Real-time expense updates
-
-Income & expense tracking
-
-Category-based transactions
-
-Financial summary dashboard
-
-Monthly analytics charts
-
-Pie chart spending breakdown
-
-Add / edit / delete transactions
-
-Swipe-to-delete interaction
-
-Light & dark theme support
-
-Clean architecture structure
-
-Riverpod state management
-
-App Screens
-
-Login Screen
-Secure Firebase authentication
-
-Home Dashboard
-Balance, income, expense overview
-
-Analytics Screen
-Charts and category spending
-
-Add / Edit Sheet
-Modern bottom sheet transaction input
-
-Tech Stack
-
-Flutter
-Firebase Auth
-Cloud Firestore
-Riverpod
-FL Chart
-Equatable
-Clean Architecture
-
-Project Architecture
-lib/
-│
-├── core/
-│   ├── theme/
-│   ├── utils/
-│
-├── features/
-│   ├── auth/
-│   │   ├── data/
-│   │   ├── domain/
-│   │   ├── presentation/
-│   │
-│   ├── expenses/
-│       ├── data/
-│       ├── domain/
-│       ├── presentation/
-│
-├── firebase_options.dart
-├── main.dart
-
-
-Architecture Layers:
-
-Presentation → UI + Providers
-Domain → Entities + Repositories
-Data → Firebase implementations
-
-Getting Started
-1. Clone Repository
-git clone https://github.com/YOUR_USERNAME/smart-expense-tracker.git
-cd smart-expense-tracker
-
-2. Install Dependencies
-flutter pub get
-
-3. Firebase Setup
-
-This project uses Firebase.
-
-Step 1 — Create Firebase Project
-
-Go to Firebase Console
-Create project
-
-Step 2 — Add Android App
-
-Package name:
-
-com.example.expenseTracker
-
-
-Download:
-
-google-services.json
-
-
-Place inside:
-
-android/app/
-
-Step 3 — Enable Firebase Services
-
-Enable:
-
-Authentication → Email/Password
-Cloud Firestore → Test mode
-
-Step 4 — FlutterFire Configure
-dart pub global activate flutterfire_cli
-flutterfire configure
-
-
-This generates:
-
-firebase_options.dart
-
-4. Run App
-flutter run
-
-Data Model
-
-Expense:
-
-id: String
-title: String
-amount: double
-category: ExpenseCategory
-date: DateTime
-
-
-Amount rules:
-
-Positive → Income
-Negative → Expense
-
-Categories
-
-Food
-Transport
-Shopping
-Entertainment
-Health
-Bills
-Travel
-Education
-Other
-
-Charts & Analytics
-
-Monthly bar chart
-Category pie chart
-Total spending summary
-Income vs expense
-
-State Management
-
-Riverpod providers:
-
-authStateChangesProvider
-expensesStreamProvider
-expenseSummaryProvider
-themeModeProvider
-
-Firebase Structure
-
-Firestore:
-
-users/{userId}/expenses/{expenseId}
-
-
-Fields:
-
-title
-amount
-category
-date
-
-Dependencies
-flutter_riverpod
-firebase_core
-firebase_auth
-cloud_firestore
-fl_chart
-equatable
-
-Future Improvements
-
-Budget limits
-Recurring transactions
-Export CSV/PDF
-Notifications
-Multi-currency
-AI spending insights
-Biometric login
-
-Author
-
-Vanshika Nimwal
-
-License
-
-MIT License
-
-Contribution
-
-Pull requests are welcome.
-For major changes, open an issue first.
-
-Support
-
-If you like this project, give it a star.
+# Smart Expense Tracker
+
+A production-ready Flutter application for comprehensive personal finance management, built with Clean Architecture, Firebase, and Riverpod.
+
+## Overview
+
+Smart Expense Tracker provides users with powerful tools to monitor, categorize, and analyze their spending patterns. The application features real-time cloud synchronization, intuitive transaction management, and comprehensive financial analytics powered by an intuitive dashboard and visualizations.
+
+## Key Features
+
+- **Authentication & Security**
+  - Secure Firebase Authentication with email/password
+  - User-specific data isolation and privacy
+
+- **Transaction Management**
+  - Add, edit, and delete income/expense transactions
+  - Category-based transaction organization
+  - Swipe-to-delete interactions
+  - Real-time transaction updates
+
+- **Financial Analytics**
+  - Comprehensive dashboard with balance overview
+  - Monthly bar charts for spending trends
+  - Category-based pie chart visualizations
+  - Income vs. expense comparisons
+  - Financial summary reports
+
+- **User Experience**
+  - Light and dark theme support
+  - Modern, responsive UI design
+  - Bottom sheet transaction input interface
+  - Real-time cloud synchronization
+
+## Technology Stack
+
+| Component | Technology |
+|-----------|-----------|
+| **Framework** | Flutter |
+| **Authentication** | Firebase Authentication |
+| **Database** | Cloud Firestore |
+| **State Management** | Riverpod |
+| **Charts & Analytics** | FL Chart |
+| **Architecture** | Clean Architecture |
+| **Utilities** | Equatable |
+
+## Project Structure
